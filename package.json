@@ -1,0 +1,19 @@
+{
+	"name": "mini-webpack",
+	"author": "luhaifeng666",
+	"description": "实现简约版的webpack",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"ca": "git add -A && node_modules/.bin/git-cz -av",
+		"commit": "node_modules/.bin/git-cz"
+	},
+	"keywords": [],
+	"license": "ISC",
+	"devDependencies": {
+		"husky": "^5.0.9",
+		"commitizen": "^4.2.3",
+		"cz-conventional-changelog": "^3.3.0",
+		"lint-staged": "^10.5.4"
+	}
+}
