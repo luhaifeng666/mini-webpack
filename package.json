@@ -4,6 +4,7 @@
 	"description": "实现简约版的webpack",
 	"version": "1.0.0",
 	"main": "index.js",
+	"type": "module",
 	"scripts": {
 		"ca": "git add -A && node_modules/.bin/git-cz -av",
 		"commit": "node_modules/.bin/git-cz"
@@ -11,9 +12,14 @@
 	"keywords": [],
 	"license": "ISC",
 	"devDependencies": {
-		"husky": "^5.0.9",
+		"@babel/parser": "^7.17.0",
+		"@babel/traverse": "^7.17.0",
+		"babel-core": "^6.26.3",
+		"babel-preset-env": "^1.7.0",
 		"commitizen": "^4.2.3",
 		"cz-conventional-changelog": "^3.3.0",
+		"ejs": "^3.1.6",
+		"husky": "^5.0.9",
 		"lint-staged": "^10.5.4"
 	}
 }

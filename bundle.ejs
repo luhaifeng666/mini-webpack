@@ -1,0 +1,25 @@
+(function(modules) {
+    function require(id) {
+        // 获取路径对应的方法
+        const [ fn, mapping ] = modules[id]
+        // 转换
+        function localRequire(filePath) {
+            const id = mapping[filePath]
+            return require(id)
+        }
+        // 定义module
+        const module = { exports: {} }
+        // 调用函数
+        fn(localRequire, module, module.exports)
+        // 返回module.exports
+        return module.exports
+    }
+    // 调用入口文件
+    require(0)
+})({
+    <% data.forEach(info => { %>
+        <%- info["id"] %>: [function(require, module, exports) {
+            <%- info["code"] %>
+        }, <%- JSON.stringify(info["mapping"]) %>],
+    <% })%>
+})
